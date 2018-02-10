@@ -12,6 +12,8 @@
 		01AFF8D5202F9A3600C18485 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01AFF8D3202F9A3600C18485 /* Main.storyboard */; };
 		01AFF8D7202F9A3600C18485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01AFF8D6202F9A3600C18485 /* Assets.xcassets */; };
 		01AFF8DA202F9A3600C18485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01AFF8D8202F9A3600C18485 /* LaunchScreen.storyboard */; };
+		01AFF8E2202F9B6A00C18485 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01AFF8E1202F9B6A00C18485 /* GoogleService-Info.plist */; };
+		9539159762DD6D305C6202B9 /* Pods_WePool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C7AAE3B712FA4197500A1F /* Pods_WePool.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,10 @@
 		01AFF8D6202F9A3600C18485 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01AFF8D9202F9A3600C18485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01AFF8DB202F9A3600C18485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01AFF8E1202F9B6A00C18485 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0947E76CBDAED55AF1611F7A /* Pods-WePool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WePool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WePool/Pods-WePool.debug.xcconfig"; sourceTree = "<group>"; };
+		A8C7AAE3B712FA4197500A1F /* Pods_WePool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WePool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6EA163C2850FB3F90E61559 /* Pods-WePool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WePool.release.xcconfig"; path = "Pods/Target Support Files/Pods-WePool/Pods-WePool.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9539159762DD6D305C6202B9 /* Pods_WePool.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,8 @@
 			children = (
 				01AFF8CE202F9A3600C18485 /* WePool */,
 				01AFF8CD202F9A3600C18485 /* Products */,
+				0AE2C37507D20FCD77FCE9FC /* Pods */,
+				B8E63E862D2731596C2A0102 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +69,26 @@
 				01AFF8D6202F9A3600C18485 /* Assets.xcassets */,
 				01AFF8D8202F9A3600C18485 /* LaunchScreen.storyboard */,
 				01AFF8DB202F9A3600C18485 /* Info.plist */,
+				01AFF8E1202F9B6A00C18485 /* GoogleService-Info.plist */,
 			);
 			path = WePool;
+			sourceTree = "<group>";
+		};
+		0AE2C37507D20FCD77FCE9FC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0947E76CBDAED55AF1611F7A /* Pods-WePool.debug.xcconfig */,
+				B6EA163C2850FB3F90E61559 /* Pods-WePool.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B8E63E862D2731596C2A0102 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8C7AAE3B712FA4197500A1F /* Pods_WePool.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01AFF8DE202F9A3600C18485 /* Build configuration list for PBXNativeTarget "WePool" */;
 			buildPhases = (
+				1D297F0C7F1AE9B0C1729076 /* [CP] Check Pods Manifest.lock */,
 				01AFF8C8202F9A3600C18485 /* Sources */,
 				01AFF8C9202F9A3600C18485 /* Frameworks */,
 				01AFF8CA202F9A3600C18485 /* Resources */,
+				7D5516C18D9340101CECD8AC /* [CP] Embed Pods Frameworks */,
+				DA7912AE9F5DFE6E0AFADC9D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,12 +154,69 @@
 			buildActionMask = 2147483647;
 			files = (
 				01AFF8DA202F9A3600C18485 /* LaunchScreen.storyboard in Resources */,
+				01AFF8E2202F9B6A00C18485 /* GoogleService-Info.plist in Resources */,
 				01AFF8D7202F9A3600C18485 /* Assets.xcassets in Resources */,
 				01AFF8D5202F9A3600C18485 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D297F0C7F1AE9B0C1729076 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WePool-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D5516C18D9340101CECD8AC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WePool/Pods-WePool-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WePool/Pods-WePool-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA7912AE9F5DFE6E0AFADC9D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WePool/Pods-WePool-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		01AFF8C8202F9A3600C18485 /* Sources */ = {
@@ -272,6 +359,7 @@
 		};
 		01AFF8DF202F9A3600C18485 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0947E76CBDAED55AF1611F7A /* Pods-WePool.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +375,7 @@
 		};
 		01AFF8E0202F9A3600C18485 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6EA163C2850FB3F90E61559 /* Pods-WePool.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
