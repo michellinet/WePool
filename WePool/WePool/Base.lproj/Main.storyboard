@@ -78,13 +78,56 @@
                                         <state key="normal" title="Not a Pooler? Create an Account.">
                                             <color key="titleColor" red="0.38823529411764707" green="0.396078431372549" blue="0.72156862745098038" alpha="0.85030500856164382" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signUpButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tsc-pw-Z5Z"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lfu-gB-eyw">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Hk4-QC-qfZ">
+                                        <rect key="frame" x="169" y="305" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="R0Z-tQ-QoK">
+                                        <rect key="frame" x="108.5" y="263.5" width="159.5" height="120.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Phone Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HuJ-aa-cqV">
+                                                <rect key="frame" x="0.0" y="0.0" width="159.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZRx-Tq-4LC">
+                                                <rect key="frame" x="0.0" y="40.5" width="159.5" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4K-Ll-JE5">
+                                                <rect key="frame" x="0.0" y="90.5" width="159.5" height="30"/>
+                                                <state key="normal" title="Sign Up BITCH!"/>
+                                                <connections>
+                                                    <action selector="signUpWithPhoneNumberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JDA-RC-k1e"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Hk4-QC-qfZ" firstAttribute="centerY" secondItem="lfu-gB-eyw" secondAttribute="centerY" id="6JI-0j-tBU"/>
+                                    <constraint firstItem="R0Z-tQ-QoK" firstAttribute="centerY" secondItem="lfu-gB-eyw" secondAttribute="centerY" id="KgJ-Nh-8n6"/>
+                                    <constraint firstItem="R0Z-tQ-QoK" firstAttribute="centerX" secondItem="lfu-gB-eyw" secondAttribute="centerX" id="beQ-CD-LKH"/>
+                                    <constraint firstItem="Hk4-QC-qfZ" firstAttribute="centerX" secondItem="lfu-gB-eyw" secondAttribute="centerX" id="hJx-n4-OuS"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="52e-dG-Mja" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="55Y-CI-lyd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lfu-gB-eyw" secondAttribute="trailing" id="AeN-9h-Jmw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="02T-Xj-aZz" secondAttribute="trailing" constant="20" id="Bga-oS-DNd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="02T-Xj-aZz" secondAttribute="bottom" constant="40" id="Cjb-uH-csK"/>
                             <constraint firstItem="8JJ-XY-jUS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Cpp-8D-qZn"/>
@@ -94,10 +137,19 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8JJ-XY-jUS" secondAttribute="trailing" constant="20" id="NIU-Ro-x57"/>
                             <constraint firstItem="02T-Xj-aZz" firstAttribute="top" secondItem="52e-dG-Mja" secondAttribute="bottom" constant="159.5" id="Qz9-hh-NbV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="52e-dG-Mja" secondAttribute="trailing" constant="10" id="ZvO-qd-i6G"/>
+                            <constraint firstItem="lfu-gB-eyw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="alp-lZ-hqB"/>
+                            <constraint firstItem="lfu-gB-eyw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="crg-sJ-rfe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lfu-gB-eyw" secondAttribute="bottom" id="ocL-Rt-F6V"/>
                             <constraint firstItem="02T-Xj-aZz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qQB-Dt-w4s"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="enterPhoneNumberView" destination="lfu-gB-eyw" id="F7m-1h-iEV"/>
+                        <outlet property="phoneNumberTextField" destination="ZRx-Tq-4LC" id="a5E-BB-XXr"/>
+                        <outlet property="signUpFieldsStackView" destination="R0Z-tQ-QoK" id="Q97-LT-jv1"/>
+                        <outlet property="spinner" destination="Hk4-QC-qfZ" id="wog-wB-9Dc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
