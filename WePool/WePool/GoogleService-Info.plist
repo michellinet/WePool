@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>199435038021-ved12l4fia0cvfh363kv951nto182ev0.apps.googleusercontent.com</string>
+	<string>168345723229-p3mbu9mfalnj34escjj1iknor5ior7in.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.199435038021-ved12l4fia0cvfh363kv951nto182ev0</string>
+	<string>com.googleusercontent.apps.168345723229-p3mbu9mfalnj34escjj1iknor5ior7in</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCbbpsTcnXx0KNLKzSAWBe12Li0eAVs2GI</string>
+	<string>AIzaSyAnC8JU9bekYTGL7N_weAL41Z0cZmO30C8</string>
 	<key>GCM_SENDER_ID</key>
-	<string>199435038021</string>
+	<string>168345723229</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.wepoolteam.WePool</string>
+	<string>com.wepool.WePool</string>
 	<key>PROJECT_ID</key>
-	<string>wepool-1251c</string>
+	<string>wepool-21893</string>
 	<key>STORAGE_BUCKET</key>
-	<string>wepool-1251c.appspot.com</string>
+	<string>wepool-21893.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:199435038021:ios:2cbc5bfe07b6c48d</string>
+	<string>1:168345723229:ios:0d71c4b237f8ab7e</string>
 	<key>DATABASE_URL</key>
-	<string>https://wepool-1251c.firebaseio.com</string>
+	<string>https://wepool-21893.firebaseio.com</string>
 </dict>
 </plist>

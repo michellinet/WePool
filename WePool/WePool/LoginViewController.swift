@@ -19,6 +19,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBAction func signUpButtonPressed(_ sender: Any) {
         enterPhoneNumberView.isHidden = false
+        spinner.isHidden = true
     }
 
     @IBAction func signUpWithPhoneNumberButtonPressed(_ sender: Any) {
@@ -26,7 +27,12 @@ class LoginViewController: UIViewController {
         spinner.isHidden = false
         spinner.startAnimating()
 
-//        PhoneAutho
+        guard let phoneNumberText = phoneNumberTextField.text else { return }
+        let charsToKeep = "1234567890"
+        let text = "+1" + String(phoneNumberText.lazy.filter(charsToKeep.contains))
+        PhoneAuthProvider.provider().verifyPhoneNumber(text) { (verificationID, error) in
+//         DO SOMETHIN
+        }
 
 
     }

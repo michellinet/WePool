@@ -12,9 +12,9 @@
 		01AFF8D5202F9A3600C18485 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01AFF8D3202F9A3600C18485 /* Main.storyboard */; };
 		01AFF8D7202F9A3600C18485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01AFF8D6202F9A3600C18485 /* Assets.xcassets */; };
 		01AFF8DA202F9A3600C18485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01AFF8D8202F9A3600C18485 /* LaunchScreen.storyboard */; };
-		01AFF8E2202F9B6A00C18485 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01AFF8E1202F9B6A00C18485 /* GoogleService-Info.plist */; };
 		01D5F08D202FA8F100231CA2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D5F08C202FA8F100231CA2 /* LoginViewController.swift */; };
 		9539159762DD6D305C6202B9 /* Pods_WePool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C7AAE3B712FA4197500A1F /* Pods_WePool.framework */; };
+		DF446DDF2066E8AD00B4A1A6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF446DDE2066E8AD00B4A1A6 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,11 +25,12 @@
 		01AFF8D6202F9A3600C18485 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01AFF8D9202F9A3600C18485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01AFF8DB202F9A3600C18485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		01AFF8E1202F9B6A00C18485 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		01D5F08C202FA8F100231CA2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0947E76CBDAED55AF1611F7A /* Pods-WePool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WePool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WePool/Pods-WePool.debug.xcconfig"; sourceTree = "<group>"; };
 		A8C7AAE3B712FA4197500A1F /* Pods_WePool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WePool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6EA163C2850FB3F90E61559 /* Pods-WePool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WePool.release.xcconfig"; path = "Pods/Target Support Files/Pods-WePool/Pods-WePool.release.xcconfig"; sourceTree = "<group>"; };
+		DF446DDD2066E77A00B4A1A6 /* WePool.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WePool.entitlements; sourceTree = "<group>"; };
+		DF446DDE2066E8AD00B4A1A6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,13 +66,14 @@
 		01AFF8CE202F9A3600C18485 /* WePool */ = {
 			isa = PBXGroup;
 			children = (
+				DF446DDD2066E77A00B4A1A6 /* WePool.entitlements */,
 				01AFF8CF202F9A3600C18485 /* AppDelegate.swift */,
 				01AFF8D1202F9A3600C18485 /* ViewController.swift */,
 				01AFF8D3202F9A3600C18485 /* Main.storyboard */,
 				01AFF8D6202F9A3600C18485 /* Assets.xcassets */,
 				01AFF8D8202F9A3600C18485 /* LaunchScreen.storyboard */,
+				DF446DDE2066E8AD00B4A1A6 /* GoogleService-Info.plist */,
 				01AFF8DB202F9A3600C18485 /* Info.plist */,
-				01AFF8E1202F9B6A00C18485 /* GoogleService-Info.plist */,
 				01D5F08C202FA8F100231CA2 /* LoginViewController.swift */,
 			);
 			path = WePool;
@@ -130,6 +132,14 @@
 					01AFF8CB202F9A3600C18485 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -157,7 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01AFF8DA202F9A3600C18485 /* LaunchScreen.storyboard in Resources */,
-				01AFF8E2202F9B6A00C18485 /* GoogleService-Info.plist in Resources */,
+				DF446DDF2066E8AD00B4A1A6 /* GoogleService-Info.plist in Resources */,
 				01AFF8D7202F9A3600C18485 /* Assets.xcassets in Resources */,
 				01AFF8D5202F9A3600C18485 /* Main.storyboard in Resources */,
 			);
@@ -368,12 +378,15 @@
 			baseConfigurationReference = 0947E76CBDAED55AF1611F7A /* Pods-WePool.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WePool/WePool.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 369K2W9959;
+				DEVELOPMENT_TEAM = 5QNKR8RC4W;
 				INFOPLIST_FILE = WePool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wepoolteam.WePool;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wepool.WePool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -384,12 +397,15 @@
 			baseConfigurationReference = B6EA163C2850FB3F90E61559 /* Pods-WePool.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WePool/WePool.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 369K2W9959;
+				DEVELOPMENT_TEAM = 5QNKR8RC4W;
 				INFOPLIST_FILE = WePool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wepoolteam.WePool;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wepool.WePool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
