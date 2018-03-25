@@ -36,8 +36,13 @@ class LoginViewController: UIViewController {
         let charsToKeep = "1234567890"
         let text = "+1" + String(phoneNumberText.lazy.filter(charsToKeep.contains))
         PhoneAuthProvider.provider().verifyPhoneNumber(text) { [weak self] (verificationID, error) in
-            if let error = error {
-                //TODO: present an alert and return out
+            if let _ = error {
+                let alertController = UIAlertController(title: "Error", message: "Invalid Phone Number", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Sad Dog", style: .cancel, handler: nil))
+                self?.present(alertController, animated: true, completion: nil)
+                self?.signUpFieldsStackView.isHidden = false
+                self?.spinner.isHidden = true
+                self?.spinner.stopAnimating()
                 return
             }
             self?.signUpFieldsStackView.isHidden = false
