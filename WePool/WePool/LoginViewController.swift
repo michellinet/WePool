@@ -12,11 +12,16 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var signUpTitleLabel: UILabel!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBOutlet weak var signUpFieldsStackView: UIStackView!
     @IBOutlet weak var enterPhoneNumberView: UIView!
-
+    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var phoneNumberTextField: UITextField!
+
+    private var verificationID: String?
+
     @IBAction func signUpButtonPressed(_ sender: Any) {
         enterPhoneNumberView.isHidden = false
         spinner.isHidden = true
@@ -30,10 +35,34 @@ class LoginViewController: UIViewController {
         guard let phoneNumberText = phoneNumberTextField.text else { return }
         let charsToKeep = "1234567890"
         let text = "+1" + String(phoneNumberText.lazy.filter(charsToKeep.contains))
-        PhoneAuthProvider.provider().verifyPhoneNumber(text) { (verificationID, error) in
-//         DO SOMETHIN
+        PhoneAuthProvider.provider().verifyPhoneNumber(text) { [weak self] (verificationID, error) in
+            if let error = error {
+                //TODO: present an alert and return out
+                return
+            }
+            self?.signUpFieldsStackView.isHidden = false
+            self?.signUpButton.isHidden = true
+            self?.signInButton.isHidden = false
+            self?.signUpTitleLabel.text = "Enter Verification Code"
+            self?.spinner.isHidden = true
+            self?.verificationID = verificationID
+            self?.phoneNumberTextField.text = nil
+            UserDefaults.standard.setValue(verificationID, forKey: "verificationID")
         }
 
 
+    }
+
+    @IBAction func signInButtonPressed(_ sender: Any) {
+        guard let verificationID = verificationID, let verificationCode = phoneNumberTextField.text  else { return }
+        let credential = PhoneAuthProvider.provider().credential(withVerificationID: verificationID, verificationCode: verificationCode)
+        Auth.auth().signIn(with: credential) { (user, error) in
+            if let error = error {
+                // ...
+                return
+            }
+            // User is signed in
+            // ...
+        }
     }
 }

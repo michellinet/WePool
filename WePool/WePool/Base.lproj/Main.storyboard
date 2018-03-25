@@ -108,11 +108,21 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4K-Ll-JE5">
                                                 <rect key="frame" x="0.0" y="90.5" width="159.5" height="30"/>
                                                 <color key="backgroundColor" red="0.38823529411764707" green="0.396078431372549" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Sign Up BITCH!">
+                                                <state key="normal" title="Sign Up">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="signUpWithPhoneNumberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JDA-RC-k1e"/>
+                                                </connections>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7y-Xm-nYV">
+                                                <rect key="frame" x="0.0" y="120.5" width="159.5" height="0.0"/>
+                                                <color key="backgroundColor" red="0.38823529410000002" green="0.39607843139999999" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Sign In">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="signInButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="igW-6U-xBk"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -150,13 +160,31 @@
                     <connections>
                         <outlet property="enterPhoneNumberView" destination="lfu-gB-eyw" id="F7m-1h-iEV"/>
                         <outlet property="phoneNumberTextField" destination="ZRx-Tq-4LC" id="a5E-BB-XXr"/>
+                        <outlet property="signInButton" destination="Q7y-Xm-nYV" id="Tb7-rb-5jq"/>
+                        <outlet property="signUpButton" destination="r4K-Ll-JE5" id="xKq-g6-7JV"/>
                         <outlet property="signUpFieldsStackView" destination="R0Z-tQ-QoK" id="Q97-LT-jv1"/>
+                        <outlet property="signUpTitleLabel" destination="HuJ-aa-cqV" id="HHi-zj-ee2"/>
                         <outlet property="spinner" destination="Hk4-QC-qfZ" id="wog-wB-9Dc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="32.833583208395808"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0x7-MV-yem">
+            <objects>
+                <viewController id="83V-ja-Sj2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5dn-2k-o6g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="8Y9-Nj-2to"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JfU-c2-rt2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="890" y="33"/>
         </scene>
     </scenes>
 </document>
